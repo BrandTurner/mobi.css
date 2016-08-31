@@ -87,7 +87,7 @@ code {
   padding: 2px 3px; }
 
 pre {
-  max-height: 500px;
+  max-height: 300px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.05);
@@ -449,7 +449,7 @@ select {
   text-align: right; }
 
 .scroll-view {
-  max-height: 500px;
+  max-height: 300px;
   overflow: auto;
   -webkit-overflow-scrolling: touch; }
 
