@@ -18,7 +18,7 @@ html {
 body {
   background-color: #f3f3f3;
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Arial, Helvetica, STHeiti, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Arial, Helvetica, STHeiti, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.8rem;
   line-height: 1.5;
   margin: 0; }
@@ -83,7 +83,7 @@ dt {
 
 code {
   background-color: rgba(0, 0, 0, 0.05);
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 85%;
   padding: 2px 3px; }
 
@@ -330,7 +330,8 @@ html [type=button],
   .form label {
     cursor: pointer;
     display: block;
-    margin-top: 15px; }
+    margin-top: 15px;
+    padding: 0 0 0 20px; }
   .form button,
   .form select,
   .form textarea,
@@ -362,7 +363,7 @@ html [type=button],
     border: 1px solid #ddd;
     border-radius: 3px;
     color: #333;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Arial, Helvetica, STHeiti, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Arial, Helvetica, STHeiti, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1.8rem;
     padding: 5px 10px; }
     .form button:focus,
@@ -386,7 +387,8 @@ html [type=button],
       border-color: #3399ff; }
   .form [type=checkbox],
   .form [type=radio] {
-    margin: 13px 5px; }
+    margin: 0 5px 0 -15px;
+    position: static; }
   .form [type=file] {
     cursor: pointer;
     padding: 6px 0; }
@@ -440,7 +442,7 @@ html [type=button],
   border: 1px solid #ddd;
   border-radius: 3px;
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Arial, Helvetica, STHeiti, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", Arial, Helvetica, STHeiti, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.8rem;
   padding: 5px 10px;
   text-align: center;
