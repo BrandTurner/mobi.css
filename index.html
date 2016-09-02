@@ -18,8 +18,8 @@
     <![endif]-->
     <div class="container">
       <h1 class="row mt-15" id="mobi-css">
-        <div class="col" style="max-width:60px;">
-          <img src="img/mobi-logo-512.png" alt="Mobi.css Logo" style="position:relative; bottom:3px;"/>
+        <div class="col flex-middle" style="max-width:60px;">
+          <img src="img/mobi-logo-512.png" alt="Mobi.css Logo"/>
         </div>
         <div class="col">Mobi.css</div>
         <div class="col text-right">
@@ -299,33 +299,33 @@
 <form class="form" action="#basic-forms">
   <input type="text" placeholder="Name"/>
   <input type="password" placeholder="Password"/>
-  <label><input type="checkbox"/>I agree to terms.</label>
+  <label class="label-checkbox"><input type="checkbox"/>I agree to terms.</label>
   <input type="submit" value="Sign Up Now"/>
 </form>
 
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#basic-forms"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Name"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Email"</span>/&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>I agree to terms.<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>I agree to terms.<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Sign Up Now"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre><h4 id="complicate-forms">Complicate Forms</h4>
 <p>If you want to have multiple inputs in one row, you should use grid system.</p>
 <form class="form" action="#complicate-forms">
   <div class="row">
-    <label class="col label text-right" class="col label text-right" for="multiple-inputs-name" style="max-width:90px;">Name: </label>
+    <label class="col text-right" for="multiple-inputs-name" style="max-width:90px;">Name: </label>
     <div class="col"><input type="text" id="multiple-inputs-name" placeholder="xcatliu"/></div>
   </div>
   <div class="row">
-    <label class="col label text-right" style="max-width:90px;">Gender: </label>
-    <div class="col"><label>
+    <label class="col text-right" style="max-width:90px;">Gender: </label>
+    <div class="col"><label class="label-radio">
       <input type="radio" name="multiple-inputs-gender" value="Male"/>Male
     </label></div>
-    <div class="col"><label>
+    <div class="col"><label class="label-checkbox">
       <input type="radio" name="multiple-inputs-gender" value="Female"/>Female
     </label></div>
   </div>
   <div class="row">
-    <label class="col label text-right" style="max-width:90px;">Country: </label>
+    <label class="col text-right" style="max-width:90px;">Country: </label>
     <div class="col">
       <select>
         <option disabled selected value> -- select -- </option>
@@ -335,13 +335,13 @@
     </div>
   </div>
   <div class="row">
-    <label class="col label text-right" style="max-width:90px;">Avatar:</label>
+    <label class="col text-right" style="max-width:90px;">Avatar:</label>
     <div class="col">
       <input type="file"/>
     </div>
   </div>
   <div class="row">
-    <label class="col label text-right" for="multiple-inputs-bio" style="max-width:90px;">Bio: </label>
+    <label class="col text-right" for="multiple-inputs-bio" style="max-width:90px;">Bio: </label>
     <div class="col">
       <textarea id="multiple-inputs-bio" placeholder="Who are you?"></textarea>
     </div>
@@ -359,20 +359,20 @@
 
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#complicate-forms"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"multiple-inputs-name"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Name: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col text-right"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"multiple-inputs-name"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Name: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"multiple-inputs-name"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"xcatliu"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Gender: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Gender: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"multiple-inputs-gender"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Male"</span>/&gt;</span>Male
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"multiple-inputs-gender"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Female"</span>/&gt;</span>Female
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Country: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Country: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">selected</span> <span class="hljs-attr">value</span>&gt;</span> -- select -- <span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
@@ -382,24 +382,23 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Avatar:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Avatar:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span>/&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"multiple-inputs-bio"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Bio: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col text-right"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"multiple-inputs-bio"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Bio: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"multiple-inputs-bio"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Who are you?"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col label text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:90px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-danger"</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:100px;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-primary"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -442,7 +441,7 @@
 <p>As mentioned in <a href="#margin-top-only">Margin Top Only</a> section, Mobi.css provides three classes for override the length to margin to top, they are <code>mt-30</code>, <code>mt-15</code> and <code>mt-0</code>.</p>
 <p>For more details, please read <a href="#margin-top-only">Margin Top Only</a> section.</p>
 <h4 id="align-utilities">Align Utilities</h4>
-<p>You can use Mobi.css to easily align contents.</p>
+<p>You can use Mobi.css to easily align contents, both horizontally and vertically!</p>
 <h5 id="align-inline-contents">Align Inline Contents</h5>
 <div class="text-left alert-success mt-15">Mobi.css is awesome!</div>
 <div class="text-center alert-success">Awesome!</div>
@@ -450,7 +449,63 @@
 
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-left alert-success mt-15"</span>&gt;</span>Mobi.css is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right alert-success"</span>&gt;</span>Some!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="-scroll-view-"><code>scroll-view</code></h4>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right alert-success"</span>&gt;</span>Some!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="align-block-contents">Align Block Contents</h4>
+<div class="flex-left alert-success mt-15">
+  <div class="alert-success">Mobi.css</div>
+</div>
+<div class="flex-center alert-success">
+  <div class="alert-success">Is</div>
+</div>
+<div class="flex-right alert-success">
+  <div class="alert-success">Awesome!</div>
+</div>
+<div class="flex-top alert-success" style="height:150px;">
+  <div class="alert-success">Mobi.css</div>
+</div>
+<div class="flex-middle alert-success" style="height:150px;">
+  <div class="alert-success">Is</div>
+</div>
+<div class="flex-bottom alert-success" style="height:150px;">
+  <div class="alert-success">Awesome!</div>
+</div>
+<div class="flex-center flex-middle alert-success" style="height:150px;">
+  <div class="alert-success">Mobi.css is awesome!</div>
+</div>
+
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-left alert-success mt-15"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center alert-success"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Is<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-right alert-success"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-top alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-middle alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Is<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-bottom alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center flex-middle alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-success"</span>&gt;</span>Mobi.css is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>You can use <code>flex-xxx</code> together with <code>row</code></p>
+<div class="row mt-15">
+  <div class="col-1-3 alert-success">col-1-3 in row</div>
+</div>
+<div class="row flex-right">
+  <div class="col-1-3 alert-success">col-1-3 in row flex-right</div>
+</div>
+
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mt-15"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1-3 alert-success"</span>&gt;</span>col-1-3 in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row flex-right"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1-3 alert-success"</span>&gt;</span>col-1-3 in row flex-right<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="-scroll-view-"><code>scroll-view</code></h4>
 <p>Mobile devices usually have small width, so it&#39;s very useful to use a <code>scroll-view</code> class.</p>
 <p>Mobi.css optimize <code>scroll-view</code> to make it smoothly to scroll.</p>
 <h5 id="scroll-horizontal">Scroll Horizontal</h5>
@@ -609,8 +664,15 @@
 <li><a href="#grid-system"><code>col-1-3</code></a></li>
 <li><a href="#-container"><code>container</code></a></li>
 <li><a href="#-container-side"><code>container-side</code></a></li>
+<li><a href="#align-block-contents"><code>flex-center</code></a></li>
+<li><a href="#align-block-contents"><code>flex-left</code></a></li>
+<li><a href="#align-block-contents"><code>flex-middle</code></a></li>
+<li><a href="#align-block-contents"><code>flex-right</code></a></li>
+<li><a href="#align-block-contents"><code>flex-top</code></a></li>
+<li><a href="#align-block-contents"><code>flex-bottom</code></a></li>
 <li><a href="#forms"><code>form</code></a></li>
-<li><a href="#complicate-forms"><code>label</code></a></li>
+<li><a href="#complicate-forms"><code>label-radio</code></a></li>
+<li><a href="#complicate-forms"><code>label-checkbox</code></a></li>
 <li><a href="#margin-top-only"><code>mt-0</code></a></li>
 <li><a href="#margin-top-only"><code>mt-15</code></a></li>
 <li><a href="#margin-top-only"><code>mt-30</code></a></li>
