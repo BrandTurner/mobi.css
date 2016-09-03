@@ -299,14 +299,14 @@
 <form class="form" action="#basic-forms">
   <input type="text" placeholder="Name"/>
   <input type="password" placeholder="Password"/>
-  <label class="label-checkbox"><input type="checkbox"/>I agree to terms.</label>
+  <label class="flex-middle"><input type="checkbox"/>I agree to terms.</label>
   <input type="submit" value="Sign Up Now"/>
 </form>
 
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#basic-forms"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Name"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Email"</span>/&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>I agree to terms.<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-middle"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>I agree to terms.<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Sign Up Now"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre><h4 id="complicate-forms">Complicate Forms</h4>
 <p>If you want to have multiple inputs in one row, you should use grid system.</p>
@@ -317,10 +317,10 @@
   </div>
   <div class="row">
     <label class="col text-right" style="max-width:90px;">Gender: </label>
-    <div class="col"><label class="label-radio">
+    <div class="col"><label class="flex-middle">
       <input type="radio" name="multiple-inputs-gender" value="Male"/>Male
     </label></div>
-    <div class="col"><label class="label-checkbox">
+    <div class="col"><label class="flex-middle">
       <input type="radio" name="multiple-inputs-gender" value="Female"/>Female
     </label></div>
   </div>
@@ -364,10 +364,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:90px;"</span>&gt;</span>Gender: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-radio"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-middle"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"multiple-inputs-gender"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Male"</span>/&gt;</span>Male
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-checkbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-middle"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"multiple-inputs-gender"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Female"</span>/&gt;</span>Female
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -402,7 +402,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-primary"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre><p>A warn tip, when you are using <code>&lt;label&gt;</code> element, you can add <code>class=&quot;label-radio&quot;</code> or <code>class=&quot;label-checkbox&quot;</code> if it&#39;s the parent of <code>radio</code> or <code>checkbox</code> label, but don&#39;t add the class if it&#39;s a text label.</p>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre><p>A warn tip, when you are using <code>&lt;label&gt;</code> element, you can add <code>class=&quot;flex-middle&quot;</code> if it&#39;s the parent of <code>radio</code> or <code>checkbox</code> label, this makes radio button aligned middle vertically.</p>
 <h4 id="-disabled-and-readonly-"><code>disabled</code> and <code>readonly</code></h4>
 <form class="form" action="#disabled-forms">
   <input type="text" placeholder="Disabled Input" disabled/>
@@ -671,8 +671,6 @@
 <li><a href="#align-block-contents"><code>flex-top</code></a></li>
 <li><a href="#align-block-contents"><code>flex-bottom</code></a></li>
 <li><a href="#forms"><code>form</code></a></li>
-<li><a href="#complicate-forms"><code>label-radio</code></a></li>
-<li><a href="#complicate-forms"><code>label-checkbox</code></a></li>
 <li><a href="#margin-top-only"><code>mt-0</code></a></li>
 <li><a href="#margin-top-only"><code>mt-15</code></a></li>
 <li><a href="#margin-top-only"><code>mt-30</code></a></li>
