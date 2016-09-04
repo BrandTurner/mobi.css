@@ -16,38 +16,39 @@
     <!--[if lt IE 9]>
       <p style="text-align: center!important; margin: 0 0 0.5em!important; background-color: #d9534f!important; color: #fff!important; padding: 0.5em 1em!important;">You are using an <strong>outdated</strong> browser. Please <a style="color: #fff!important; text-decoration: underline!important;" href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container">
-      <h1 class="row mt-15" id="mobi-css">
-        <div class="col flex-middle" style="max-width:60px;">
-          <img src="img/mobi-logo-512.png" alt="Mobi.css Logo" width="38"/>
+    <div class="flex-center">
+      <div class="container">
+        <h1 class="row mt-15" id="mobi-css">
+          <div class="col flex-middle" style="max-width:60px;">
+            <img src="img/mobi-logo-512.png" alt="Mobi.css Logo" width="38"/>
+          </div>
+          <div class="col">Mobi.css</div>
+          <div class="col text-right">
+            <a href="https://github.com/xcatliu/mobi.css/" style="color:#333">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </h1>
+        <blockquote><p>A lightweight, flexible css framework that focus on mobile.</p></blockquote>
+        <div class="row mt-30">
+          <div class="col text-center">
+            <i class="fa fa-leaf" style="font-size:6rem;"></i>
+          </div>
+          <div class="col text-center">
+            <i class="fa fa-cogs" style="font-size:6rem;"></i>
+          </div>
+          <div class="col text-center">
+            <i class="fa fa-mobile" style="font-size:6rem; transform:scale(1.35);"></i>
+          </div>
         </div>
-        <div class="col">Mobi.css</div>
-        <div class="col text-right">
-          <a href="https://github.com/xcatliu/mobi.css/" style="color:#333">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
-      </h1>
-      <blockquote><p>A lightweight, flexible css framework that focus on mobile.</p></blockquote>
-      <div class="row mt-30">
-        <div class="col text-center">
-          <i class="fa fa-leaf" style="font-size:6rem;"></i>
-        </div>
-        <div class="col text-center">
-          <i class="fa fa-cogs" style="font-size:6rem;"></i>
-        </div>
-        <div class="col text-center">
-          <i class="fa fa-mobile" style="font-size:6rem; transform:scale(1.35);"></i>
-        </div>
-      </div>
-      <article>
-        <h2 id="table-of-content">Table of content</h2>
+        <article>
+          <h2 id="table-of-content">Table of content</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#downloads">Downloads</a></li>
+<li><a href="#getting-started">Getting started</a></li>
 <li><a href="#documentation">Documentation</a><ul>
 <li><a href="#layout">Layout</a></li>
-<li><a href="#grid-system">Grid System</a></li>
+<li><a href="#grid-system">Grid system</a></li>
 <li><a href="#typography">Typography</a></li>
 <li><a href="#tables">Tables</a></li>
 <li><a href="#forms">Forms</a></li>
@@ -63,38 +64,42 @@
 <li>Heavy use of flexbox, super flexible, less than 10 lines of custom style in the <a href="http://getmobicss.com/">Homepage</a>.</li>
 <li>Focus on mobile, show mobile pages in desktop with a sidebar on the left or right.</li>
 </ul>
-<h2 id="downloads">Downloads</h2>
-<p>You can download Mobi.css in <a href="https://github.com/xcatliu/mobi.css/releases">this page</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>You can download Mobi.css in <a href="https://github.com/xcatliu/mobi.css/releases">this page</a>, then use <code>dist/mobi.min.css</code> for the compressed version.</p>
 <p>Or use npm to install:</p>
 <pre><code class="hljs shell">npm install --save mobi.css</code></pre><p>You can also build Mobi.css to your project if you are using sass.</p>
 <pre><code class="hljs scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'mobi.css/src/mobi'</span>;</code></pre><p>Be sure you have added <code>node-modules</code> to your sass&#39;s <a href="http://stackoverflow.com/questions/6502313/sass-import-a-file-from-a-different-directory">load_paths</a>.</p>
 <h2 id="documentation">Documentation</h2>
 <h3 id="layout">Layout</h3>
-<p>Mobi.css provides two kinds of containers, <code>container</code> and <code>container-side</code>, as well as a simple but flexible grid system.</p>
+<p>Mobi.css includes a simple but flexible system for laying out your project, including <code>container</code>, grid system, flex utilities, etc.</p>
 <h4 id="-container-"><code>container</code></h4>
-<p>A <code>container</code> contains all of your contents, one page should have only one <code>container</code>. In most cases, <code>container</code> is the child of <code>&lt;body&gt;</code>.</p>
+<p>A <code>container</code> contains all of your contents, one page should have only one <code>container</code>.</p>
 <p>On a mobile device (with width less than 768px), <code>container</code> will fill entire width of screen.</p>
 <p>Otherwise, <code>container</code> will have a fixed width and aligned to the center of the screen. So it won&#39;t break your design for mobile. Looks like you are viewing mobile pages on desktop.</p>
 <p><img src="img/layout.jpg" alt="layout"></p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre><h4 id="-container-side-"><code>container-side</code></h4>
-<p><code>container-side</code> is designed for additional messages which are not valuable or useful for mobile, such as <em>Scan to view on mobile</em> or <em>Go to top</em>.</p>
-<p>So <code>container-side</code> <strong>will never be seen</strong> on a mobile device.</p>
-<p>Otherwise, <code>container-side</code> will land beside the <code>container</code>, left or right depends on you.</p>
-<p>Of course, you should use only one <code>container-side</code>, and use it before or after a <code>container</code>.</p>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre><p>You may want to say &quot;Oh that&#39;s too complicated, why should I need to add two <code>&lt;div&gt;</code>s to achieve a simple <code>container</code>?&quot;</p>
+<p>Actually <code>flex-center</code> is used as a wrapper to ensure <code>container</code> aligned to the center of the screen. So if you don&#39;t add this wrapper, mobile users will not feel any difference.</p>
+<p>Also, you can add <code>flex-center</code> to <code>&lt;body&gt;</code>, it will work too. However I don&#39;t recommend it, even though you doesn&#39;t append any other elements to <code>&lt;body&gt;</code>, third-party libraries may do. It might be hard for them to set their position in a flexbox.</p>
+<p>What if we want to add a sidebar for the desktop version of your website (that would be useful when you want to show some additional messages which are not valuable for mobile, such as <em>Scan to view on mobile</em> or <em>Go to top</em>)? Here is a solution:</p>
 <p><img src="img/layout-with-side.jpg" alt="layout-with-side"></p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hide-on-mobile"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:0 30px;"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Scan to view on mobile<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/qrcode.png"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container-side"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Scan to view on mobile<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/qrcode.png"</span>/&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre><h4 id="grid-system">Grid system</h4>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre><p>As you can see, <code>hide-on-mobile</code> <strong>will never be seen</strong> on a mobile device.</p>
+<h4 id="grid-system">Grid system</h4>
 <p>Mobile doesn&#39;t need such a complicate 12# grid system, Mobi.css provides a simpler but flexible grid system.</p>
 <p>First of all, you can create a <code>row</code> which contain several <code>col</code>s, in this case, <code>row</code>&#39;s width is divided equally between <code>col</code>s.</p>
 <div class="row mt-15">
@@ -166,21 +171,78 @@
 <p>You probably know Mobi.css can use flexbox for layout, and so should you! <a href="http://caniuse.com/#feat=flexbox">Now it&#39;s safe to use flexbox on all mobile browsers</a>.</p>
 <p>Here is an example for how you can use <code>col</code> to achieve a typical fixed-fluid layout.</p>
 <div class="row mt-15">
-  <div class="col" style="max-width:70px;"><i class="fa fa-github" style="font-size:56px;"></i></div>
+  <div style="width:70px; padding:0 7px 0 15px;"><i class="fa fa-github" style="font-size:56px;"></i></div>
   <div class="col site-alert-success" style="margin-right:30px;">Hi, xcatliu, do you know what is Mobi.css?</div>
 </div>
 <div class="row mt-15">
   <div class="col site-alert-success text-right" style="margin-left:30px;">Sure I know, Mobi.css is a lightweight, flexible css framework that focus on mobile.</div>
-  <div class="col" style="max-width:70px;"><img alt="xcatliu" src="img/xcatliu.png"/></div>
+  <div style="width:70px; padding:0 15px 0 7px;"><img alt="xcatliu" src="img/xcatliu.png"/></div>
 </div>
 
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mt-15"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:70px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-github"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"font-size:56px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:70px; padding:0 7px 0 15px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-github"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"font-size:56px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"margin-right:30px;"</span>&gt;</span>Hi, xcatliu, do you know what is Mobi.css?<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mt-15"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col site-alert-success text-right"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"margin-left:30px;"</span>&gt;</span>Sure I know, Mobi.css is a lightweight, flexible css framework that focus on mobile.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width:70px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"xcatliu"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/xcatliu.png"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:70px; padding:0 15px 0 7px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"xcatliu"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/xcatliu.png"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="use-flexbox-for-aligning">Use flexbox for aligning</h4>
+<p>Forget <code>margin:0 auto;</code> and <code>top:50%; margin-top:-100px;</code>, you can use flexbox for aligning easily.</p>
+<div class="flex-left site-alert-success mt-15">
+  <div class="site-alert-success">Mobi.css</div>
+</div>
+<div class="flex-center site-alert-success">
+  <div class="site-alert-success">Is</div>
+</div>
+<div class="flex-right site-alert-success">
+  <div class="site-alert-success">Awesome!</div>
+</div>
+<div class="flex-top site-alert-success" style="height:150px;">
+  <div class="site-alert-success">Mobi.css</div>
+</div>
+<div class="flex-middle site-alert-success" style="height:150px;">
+  <div class="site-alert-success">Is</div>
+</div>
+<div class="flex-bottom site-alert-success" style="height:150px;">
+  <div class="site-alert-success">Awesome!</div>
+</div>
+<div class="flex-center flex-middle site-alert-success" style="height:150px;">
+  <div class="site-alert-success">Mobi.css is awesome!</div>
+</div>
+
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-left site-alert-success mt-15"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center site-alert-success"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Is<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-right site-alert-success"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-top site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-middle site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Is<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-bottom site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center flex-middle site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Mobi.css is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>Also, you can use <code>flex-xxx</code> together with <code>row</code>.</p>
+<div class="row mt-15">
+  <div class="col-1-3 site-alert-success">col-1-3 in row</div>
+</div>
+<div class="row flex-right">
+  <div class="col-1-3 site-alert-success">col-1-3 in row flex-right</div>
+</div>
+
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mt-15"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1-3 site-alert-success"</span>&gt;</span>col-1-3 in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row flex-right"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1-3 site-alert-success"</span>&gt;</span>col-1-3 in row flex-right<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="margin-top-only">Margin top only</h4>
 <p>Nearly all margins in Mobi.css have a <code>0</code> value for <code>margin-bottom</code>. Instead, Mobi.css use <code>margin-top</code> to make contents flow clearly.</p>
 <p>That do make sense, since it&#39;s each section&#39;s responsibility to determine the length it should margin to top.</p>
@@ -440,72 +502,15 @@
 <h4 id="layout-utilities">Layout utilities</h4>
 <p>As mentioned in <a href="#margin-top-only">Margin Top Only</a> section, Mobi.css provides three classes for override the length to margin to top, they are <code>mt-30</code>, <code>mt-15</code> and <code>mt-0</code>.</p>
 <p>For more details, please read <a href="#margin-top-only">Margin Top Only</a> section.</p>
-<h4 id="align-utilities">Align utilities</h4>
-<p>You can use Mobi.css to easily align contents, both horizontally and vertically!</p>
-<h5 id="align-inline-contents">Align inline contents</h5>
+<h4 id="text-aligning">Text aligning</h4>
+<p>You can use Mobi.css to easily align text.</p>
 <div class="text-left site-alert-success mt-15">Mobi.css is awesome!</div>
 <div class="text-center site-alert-success">Awesome!</div>
 <div class="text-right site-alert-success">Some!</div>
 
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-left site-alert-success mt-15"</span>&gt;</span>Mobi.css is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center site-alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right site-alert-success"</span>&gt;</span>Some!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="align-block-contents">Align block contents</h4>
-<div class="flex-left site-alert-success mt-15">
-  <div class="site-alert-success">Mobi.css</div>
-</div>
-<div class="flex-center site-alert-success">
-  <div class="site-alert-success">Is</div>
-</div>
-<div class="flex-right site-alert-success">
-  <div class="site-alert-success">Awesome!</div>
-</div>
-<div class="flex-top site-alert-success" style="height:150px;">
-  <div class="site-alert-success">Mobi.css</div>
-</div>
-<div class="flex-middle site-alert-success" style="height:150px;">
-  <div class="site-alert-success">Is</div>
-</div>
-<div class="flex-bottom site-alert-success" style="height:150px;">
-  <div class="site-alert-success">Awesome!</div>
-</div>
-<div class="flex-center flex-middle site-alert-success" style="height:150px;">
-  <div class="site-alert-success">Mobi.css is awesome!</div>
-</div>
-
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-left site-alert-success mt-15"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center site-alert-success"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Is<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-right site-alert-success"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-top site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Mobi.css<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-middle site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Is<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-bottom site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center flex-middle site-alert-success"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:150px;"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-alert-success"</span>&gt;</span>Mobi.css is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>You can use <code>flex-xxx</code> together with <code>row</code></p>
-<div class="row mt-15">
-  <div class="col-1-3 site-alert-success">col-1-3 in row</div>
-</div>
-<div class="row flex-right">
-  <div class="col-1-3 site-alert-success">col-1-3 in row flex-right</div>
-</div>
-
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mt-15"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1-3 site-alert-success"</span>&gt;</span>col-1-3 in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row flex-right"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-1-3 site-alert-success"</span>&gt;</span>col-1-3 in row flex-right<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="-scroll-view-"><code>scroll-view</code></h4>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right site-alert-success"</span>&gt;</span>Some!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="-scroll-view-"><code>scroll-view</code></h4>
 <p>Mobile devices usually have small width, so it&#39;s very useful to use a <code>scroll-view</code> class.</p>
 <p>Mobi.css optimize <code>scroll-view</code> to make it smoothly to scroll.</p>
 <h5 id="scroll-horizontal">Scroll horizontal</h5>
@@ -649,7 +654,11 @@
     凄凄不似向前声，满座重闻皆掩泣。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
     座中泣下谁最多？江州司马青衫湿。
   <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h2 id="customize">Customize</h2>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h4 id="-hide-on-mobile-"><code>hide-on-mobile</code></h4>
+<p>Use <code>hide-on-mobile</code> will hide the element on mobile devices.</p>
+<p class="hide-on-mobile">This part will not shown on mobiles</p>
+
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hide-on-mobile"</span>&gt;</span>This part will not shown on mobiles<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre><h2 id="customize">Customize</h2>
 <p>For advanced users, it&#39;s pretty easy to customize Mobi.css.</p>
 <p>Just copy variables from <code>src/_variables.scss</code> to <code>src/_custom.scss</code> to override default values, without modifying source files.</p>
 <h2 id="indexes">Indexes</h2>
@@ -663,35 +672,34 @@
 <li><a href="#grid-system"><code>col-1-4</code></a></li>
 <li><a href="#grid-system"><code>col-1-3</code></a></li>
 <li><a href="#-container"><code>container</code></a></li>
-<li><a href="#-container-side"><code>container-side</code></a></li>
-<li><a href="#align-block-contents"><code>flex-center</code></a></li>
-<li><a href="#align-block-contents"><code>flex-left</code></a></li>
-<li><a href="#align-block-contents"><code>flex-middle</code></a></li>
-<li><a href="#align-block-contents"><code>flex-right</code></a></li>
-<li><a href="#align-block-contents"><code>flex-top</code></a></li>
-<li><a href="#align-block-contents"><code>flex-bottom</code></a></li>
+<li><a href="#use-flexbox-for-aligning"><code>flex-center</code></a></li>
+<li><a href="#use-flexbox-for-aligning"><code>flex-left</code></a></li>
+<li><a href="#use-flexbox-for-aligning"><code>flex-middle</code></a></li>
+<li><a href="#use-flexbox-for-aligning"><code>flex-right</code></a></li>
+<li><a href="#use-flexbox-for-aligning"><code>flex-top</code></a></li>
+<li><a href="#use-flexbox-for-aligning"><code>flex-bottom</code></a></li>
 <li><a href="#forms"><code>form</code></a></li>
+<li><a href="#hide-on-mobile"><code>hide-on-mobile</code></a></li>
 <li><a href="#margin-top-only"><code>mt-0</code></a></li>
 <li><a href="#margin-top-only"><code>mt-15</code></a></li>
 <li><a href="#margin-top-only"><code>mt-30</code></a></li>
 <li><a href="#grid-system"><code>row</code></a></li>
 <li><a href="#-scroll-view-"><code>scroll-view</code></a></li>
 <li><a href="#tables"><code>table</code></a></li>
-<li><a href="#align-inline-contents"><code>text-center</code></a></li>
-<li><a href="#align-inline-contents"><code>text-left</code></a></li>
-<li><a href="#align-inline-contents"><code>text-right</code></a></li>
+<li><a href="#text-aligning"><code>text-center</code></a></li>
+<li><a href="#text-aligning"><code>text-left</code></a></li>
+<li><a href="#text-aligning"><code>text-right</code></a></li>
 </ul>
 
-      </article>
-      <hr/>
-      <address>
-        Designed and built with <i class="fa fa-heart"></i> by <a href="https://github.com/xcatliu/">@xcatliu</a>.
-      </address>
-    </div>
-    <div class="container-side">
-      <div class="mt-15">
+        </article>
+        <hr/>
+        <address>
+          Designed and built with <i class="fa fa-heart"></i> by <a href="https://github.com/xcatliu/">@xcatliu</a>.
+        </address>
+      </div>
+      <div class="hide-on-mobile" style="padding:0 30px;">
         <p class="text-center">Scan to view on mobile</p>
-        <p><img alt="qrcode" src="img/qrcode.png"/></p>
+        <p><img alt="qrcode" src="img/qrcode.png" width="196"/></p>
       </div>
     </div>
     <script>
